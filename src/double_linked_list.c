@@ -139,3 +139,29 @@ void PrintBckwdLinkedList(ListNode *head)
 
     printf("\n");
 }
+
+
+void CleanLinkedList(ListNode **linked_list)
+{
+    // First dereference **linked_list, into *head to make code easier to read 
+    ListNode *head = *linked_list;
+    ListNode *temp_ptr = NULL;
+
+    while(head != NULL)   // We trust that node is NULL when it reaches termination
+    {
+        temp_ptr = head->next;
+        free(head); 
+        head = temp_ptr;
+    }
+
+    // Last step,  we want to set *linked_list = NULL, back to caller
+    *linked_list = NULL;
+
+
+
+
+
+
+
+
+}

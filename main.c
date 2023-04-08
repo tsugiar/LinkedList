@@ -15,4 +15,9 @@ int main()
     ListNode *ThirdElementNode = head->next->next;
     InsertAfter(ThirdElementNode, 40); 
     PrintFwdLinkedList(head);            // Print out fwd, expected output -2 -> -1 -> 0 -> 40 -> 1 
+
+    // Free up memory, make sure use address of head
+    CleanLinkedList(&head);
+
+    printf("Test");
 }

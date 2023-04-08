@@ -47,8 +47,15 @@ void InsertAtTail(ListNode *linked_list, int data);
 // ==========================================================================================
 void InsertAfter(ListNode* node, int data);
 
-
-void CleanLinkedList(ListNode **head);
-
+// Print forward
 void PrintFwdLinkedList(ListNode *);
+
+// Print backward
 void PrintBckwdLinkedList(ListNode *);
+
+// Clean up linked list
+// Input is the address of linked-list head, 
+// Note : Again I use ** on linked_list, the reason is we want to set *linked_list NULL after we 
+//        done with everything
+
+void CleanLinkedList(ListNode **linked_list);
